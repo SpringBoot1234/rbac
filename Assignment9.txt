@@ -1,0 +1,31 @@
+OrganisationController:
+In the project in IOrganisationDao there are 8 methods which is implemented in the Organisation class for different purposes.
+In the OrganisationController class we are Controlling every method means there we have passed some URL for each and every method through which we can get our desird result according to our requirement.
+I am explaining the methods one by one
+1.public Organisation save(Organisation organisation):
+This method included KeyHolder interface
+Here we also used GeneratedKeyHolder class.
+Both  are predefined .
+we have created one object of GeneratedKeyHolder calss in save method to get the Key.
+we have created the object of MapSqlParameterSource And we have added the Organisation name and status through the help of the object and the method addValue() which is inside the MapSqlParameterSource Class.
+Here we have used NamedParameterJdbcTemplate .by Autowiring we have created the object and by the help of this and update method we have updated the value.
+QueryOrganisation is a class where we have written the queries for Organisation class.Here We have written many parameters .
+But in save() we used INSERT_ORG.
+INSERT_ORG is used for inserting Organisation name and status And WE have taken two parameters ON and Os respectively.
+Here we have used KeyHolder interface which helps in retrieving keys
+This is used for auto generated keys which potentially return by JDBC insert statement.
+And finally it will return the values Of class type and we can get the value from the entity class.
+2.public List<Role> getAssignedRolesById(Organisation org):
+In this method we will give the Id of Organisation then we will retrieve the values through the parameter GET_ASSIGNED_ROLE_BY_ID.
+3.public List<Role> getNotAssignedRolesById(Organisation org):
+This method is  like as public List<Role> getAssignedRolesById(Organisation org).The parameter name is GET_NOT_ASSIGNED_ROLE_BY_ID.
+4.public Organisation assignMoreRolesById(Organisation org):
+5.public Organisation updateAssignedRoleStatusById(Organisation org) :
+THis two methods please explain to me .I am not exactly getting.
+6.public Organisation findById(Organisation org):
+this method is used to retrive all the datas From the Organisation class by the parameter GET_ORG_BY_ID where we have to define the Organisation Id.
+7.public Organisation updateOrganisationNameAndStausById(Organisation org):
+This method is used for updating Organisation name and status  By the help of Id through the parameter UPDATE_STATUS_BY_ORG_ID_ROLE_ID.
+8.public List<Organisation> findAll():
+THis method is used to select all the datas of Organisation by using SELECT_ALL parameter.
+
